@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+</head>
+<body>
+    {% extends "base.html" %}
+
+    {% block title %}Formulario de Salario{% endblock %}
+
+    {% block content %}
+    <h1>Resultado del Cálculo</h1>
+    <p>Nombre: {{ nombre }}</p>
+    <p>Apellido: {{ apellido }}</p>
+    <p>Cédula: {{ cedula }}</p>
+    <p>Teléfono: {{ telefono }}</p>
+    <p>Salario Calculado: ${{ salario }}</p>
+    <a href="/" class="regresar personalizado">Regresar</a>
+    {% endblock %}
+</body>
+</html>

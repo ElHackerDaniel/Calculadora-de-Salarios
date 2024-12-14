@@ -1,0 +1,265 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Color suave para el fondo */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    transform: scale(1); /* Zoom inicial */
+    transition: transform 0.3s ease; /* Efecto de transición */
+}
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #fcfcfc; /* Fondo blanco */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative; /* Necesario para el fondo decorativo */
+    z-index: 2; /* Eleva el contenido principal */
+}
+
+/* Fondo decorativo */
+.container::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(145deg, #007bff, #28a745);
+    z-index: 1;
+    border-radius: 15px;
+    filter: blur(8px);
+    opacity: 0.6;
+}
+
+/* Encabezados */
+h1 {
+    font-size: 2rem;
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    color: #0056b3;
+}
+
+/* Información del cálculo */
+.details {
+    background-color: #eaf6ff;
+    padding: 10px; /* Reduce el espacio interior */
+    border-radius: 8px;
+    text-align: left;
+    line-height: 1.5; /* Ajusta la separación entre líneas */
+    margin: 10px 0; /* Reduce el espacio exterior */
+    font-size: 0.9rem; /* Opcional: Reduce el tamaño del texto */
+}
+
+.details p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333333;
+}
+
+/* Botón de acción */
+a.regresar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+a.regresar:hover {
+    background-color: #218838;
+}
+/* Botón de calcular con estilo personalizado */
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    color: #007bff;
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
+                0 1px 1px rgba(128, 128, 128, 0.155),
+                0 2.1px 2.1px rgba(128, 128, 128, 0.195),
+                0 4.4px 4.4px rgba(128, 128, 128, 0.241),
+                0 12px 12px rgba(128, 128, 128, 0.35);
+}
+
+button:hover {
+    transform: scale(1.1); /* Zoom al pasar el cursor */
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2),
+                0 4px 4px rgba(0, 0, 0, 0.3),
+                0 6px 6px rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.9);
+}
+a.regresar.personalizado {
+    background: linear-gradient(145deg, #000200, #007bff);
+    color: white;
+    border: 2px solid #000000; /* Agrega un borde */
+    font-size: 1.1rem; /* Cambia el tamaño de fuente */
+    padding: 12px 25px; /* Ajusta el padding */
+    transition: all 0.3s ease; /* Suaviza las transiciones */
+}
+
+a.regresar.personalizado:hover {
+    background-color: #000000; /* Cambia el color al pasar el mouse */
+    color: #007bff; /* Cambia el color del texto */
+    transform: scale(1.08); /* Aumenta el tamaño */
+}
+/* Pie de página */
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666666;
+}
+/* Efecto interactivo en campos de entrada */
+input {
+    width: 80%; /* Reduce el ancho al 80% del contenedor */
+    max-width: 400px; /* Define un ancho máximo fijo opcional */
+    padding: 10px; /* Mantén un espaciado interno cómodo */
+    margin: 10px auto; /* Centra el campo dentro del contenedor */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+
+/* Íconos en los campos */
+input[type="text"]::placeholder {
+    font-style: italic;
+    color: #aaa;
+}
+
+/* Transición animada para el botón */
+button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(145deg, #000200, #007bff);
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #007bff, #000000);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Añadir fondo dinámico */
+body {
+    animation: backgroundShift 10s infinite;
+    background: linear-gradient(-45deg, #f0f8ff, #bde0fe, #007bff);
+    background-size: 400% 400%;
+}
+
+@keyframes backgroundShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Asegura que no haya contenido fuera de la vista */
+html, body {
+    overflow: hidden; /* Opcional: evita barras de desplazamiento si el contenido no cabe */
+}
+/* Encabezados */
+h1 {
+    font-size: 2.5rem; /* Tamaño del texto */
+    color: #0056b3;
+    margin-bottom: 20px;
+    margin-top: 0; /* Elimina margen superior adicional */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 300px;
+    background-color: #fcfcfc; /* Fondo blanco */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative; /* Necesario para el fondo decorativo */
+    z-index: 2; /* Eleva el contenido principal */
+    overflow: hidden; /* Asegura que todo el contenido quede dentro */
+    margin-top: 0px; /* Espaciado hacia abajo desde el borde superior */
+}
+
+/* Ajustar el cuerpo para evitar problemas de desbordamiento */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Color suave para el fondo */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Ajusta la posición para que no desborde */
+    height: 100vh;
+    text-align: center;
+}
+
+/* Asegura que no haya contenido fuera de la vista */
+html, body {
+    overflow: hidden; /* Opcional: evita barras de desplazamiento si el contenido no cabe */
+}
